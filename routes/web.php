@@ -6,21 +6,17 @@ use App\Http\Controllers\SppController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LoginController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/PostLogin', [LoginController::class, 'login']);
 Route::get('/logout', [LoginController::class, 'logout']);
-Route::group(['middleware'=> ['auth']], function(){});
+// Route::group(['middleware'=> ['auth']], function(){});
 
-Route::get('/dashboard', function () {
-    return view('home/Dashboard');
-});
+Route::get('/dashboard', [DashboardController::class, 'index']);
 
-Route::get('/user/edit', function () {
-    return view('home.user.edit');
-});
 
 Route::get('/user', [UserController::class,'index']);
 Route::get('/user/tambah', [UserController::class,'create']);
