@@ -39,7 +39,7 @@
                                      <div class="form-group">
                                         <label for="">Level</label>
                                         <input type="text" class="form-control"
-                                          name="level" value="{{$user->leve}}"
+                                          name="level" value="{{$user->level}}"
                                            placeholder="Masukan level" required>
     
                                          </div>

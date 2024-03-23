@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\siswa;
 use App\Models\pembayaran;
 use App\Models\kelas;
 use Illuminate\Http\Request;
@@ -10,13 +11,14 @@ class pembayaranController extends Controller
     public function index()  {
         $pembayaran = pembayaran::all();
         return view('home.pembayaran.index', compact(['pembayaran']));
-
+        
     }
-
+    
     public function create() {
         $kelas=Kelas::All();
+        $siswa=Siswa::All();
         
-        return view('home.pembayaran.tambah',compact('kelas'));
+        return view('home.pembayaran.tambah',compact('kelas' ,'siswa'));
         
     }
     

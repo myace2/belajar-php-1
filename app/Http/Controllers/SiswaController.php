@@ -5,12 +5,14 @@ use App\Models\siswa;
 use App\Models\kelas;
 use Illuminate\Http\Request;
 
+
+
 class siswaController extends Controller
 {
+    
     public function index()  {
         $siswa = siswa::all();
         return view('home.siswa.index', compact(['siswa']));
-
     }
 
     public function create() {

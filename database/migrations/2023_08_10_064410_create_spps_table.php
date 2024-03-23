@@ -14,7 +14,7 @@ class CreateSppsTable extends Migration
     public function up()
     {
         Schema::create('spps', function (Blueprint $table) {
-            $table->id();
+            $table->id_spp();
             $table->string('keterangan', 50);
             $table->integer('tahun');
             $table->integer('nominal');
