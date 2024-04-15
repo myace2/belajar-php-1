@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','kelola data kelas')
+@section('title','kelola data absensi')
 @section('content')
 <div class="content-wrapper">
     <br>
@@ -9,22 +9,22 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                    <h4>Form Tambah Data Kelas</h4>
+                    <h4>Form Edit Data absensi</h4>
                         </div>
                         <div class="card-body">
-                            <form action="/kelas/simpan" method="POST">
+                            <form action="/absensi/{{$absensi->id_absensi}}/update" method="POST">
                                 @csrf
                                 <div class="form-group">
-                                  <label for="">Nama Kelas</label>
-                                  <input type="text" class="form-control"
-                                    name="nama_kelas" id="" placeholder="Masukan Nama Kelas" required>
+                                    <label for="">Tanggal Absen</label>
+                                    <input type="date" class="form-control" name="tanggal_absen" id=""
+                                        placeholder="Masukan tanggal Absen" value="{{$absensi ->tanggal_absen}}" required>
                                 </div>
-
                                 <div class="form-group">
-                                    <label for="">Kompetensi Keahlian</label>
-                                    <input type="text" class="form-control"
-                                      name="kompetensi_keahlian" id="" placeholder="Masukan Kompetensi Keahlian" required>
-                                  </div>
+                                    <label for="">Jenis Absen</label>
+                                    <input type="text" class="form-control" name="jenis_absen" id=""
+                                        placeholder="Hadir/Alpa/Sakit" value="
+                                        {{$absensi ->jenis_absen}}" required>
+                                </div>
 
                                   <button type="submit" class="btn btn-primary">Simpan</button>
                                   <button type="reset" class="btn btn-secondary">Cancel</button>

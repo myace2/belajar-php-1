@@ -17,12 +17,23 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nama_petugas',
+        'nama_user',
         'username',
-        'level',
         'password',
+        'id_jabatan',
+        'alamat',
+        'no_telepon',
     ];
+    public function User()
+    {
+        return $this->hasMany(User::class, 'id_user', 'id');
+        return $this->belongsTo(User::class, 'id_user','id');
 
+    }
+    public function Jabatan()
+    {
+        return $this->belongsTo(Jabatan::class, 'id_jabatan','id');
+    }
     /**
      * The attributes that should be hidden for arrays.
      *

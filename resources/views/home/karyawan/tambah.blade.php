@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'kelola data user')
+@section('title', 'kelola data karyawan')
 @section('content')
     <div class="content-wrapper">
         <br>
@@ -9,28 +9,23 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Form Tambah Data User</h4>
+                                <h4>Form Tambah Data karyawan</h4>
                             </div>
                             <div class="card-body">
-                                <form action="/user/simpan" method="POST">
+                                <form action="/karyawan/simpan" method="POST">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="">Nama Petugas</label>
-                                        <input type="text" class="form-control" name="nama_user" id=""
-                                            placeholder="Masukan Nama Petugas" required>
+                                        <label for="">ID Karyawan</label>
+                                        <input type="text" class="form-control" name="id_karyawan" id=""
+                                            placeholder="Masukan id_karyawan" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="">Username</label>
-                                        <input type="text" class="form-control" name="username" id=""
-                                            placeholder="Masukan Username untuk Akun" required>
+                                        <label for="">Nama</label>
+                                        <input type="text" class="form-control" name="nama" id=""
+                                            placeholder="Masukan Nama karyawan" required>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="">Password</label>
-                                        <input type="password" class="form-control" name="password" id=""
-                                            placeholder="Masukan Password" required>
-                                    </div>
                                     <div class="form-group">
                                         <label for="">Jabatan</label>
                                         <select name="id_jabatan" class="form-control">
@@ -39,16 +34,19 @@
                                             @endforeach
                                         </select> required>
                                     </div>
+
                                     <div class="form-group">
                                         <label for="">Alamat</label>
                                         <input type="text" class="form-control" name="alamat" id=""
-                                            placeholder="Masukan Alamat Anda" required>
+                                            placeholder="Masukan Alamat" required>
                                     </div>
+
                                     <div class="form-group">
-                                        <label for="">No Telepon</label>
-                                        <input type="text" class="form-control" name="no_telepon" id=""
-                                            placeholder="Masukan No Telepon Anda" required>
+                                        <label for="">No Telp</label>
+                                        <input type="number" class="form-control" name="no_telp" id=""
+                                            placeholder="Masukan No Telp" required>
                                     </div>
+
                                     <button type="submit" class="btn btn-primary">Simpan</button>
                                     <button type="reset" class="btn btn-secondary">Cancel</button>
                                 </form>

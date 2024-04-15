@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePembayaransTable extends Migration
+class CreateRekapsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreatePembayaransTable extends Migration
      */
     public function up()
     {
-        Schema::create('pembayarans', function (Blueprint $table) {
-            $table->id();
-            $table->char('nis',8);
-            $table->date('tgl_bayar');
-            $table->integer('id_spp');
-            $table->integer('jumlah_bayar');
-            $table->text('keterangan');
+        Schema::create('rekaps', function (Blueprint $table) {
+            $table->integer('id_rekap')->primary();
+            $table->integer('id_karyawans');
             $table->integer('id_user');
+            $table->integer('id_absensi');
+            $table->integer('id_jabatan');
+            $table->date('tgl_rekap');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreatePembayaransTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pembayarans');
+        Schema::dropIfExists('rekaps');
     }
 }

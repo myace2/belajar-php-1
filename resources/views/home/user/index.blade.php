@@ -8,7 +8,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                    <h1>Halaman Kelola Data Petugas</h1>
+                    <h1>Halaman Kelola Data User</h1>
                     <a href="/user/tambah" class="btn btn-primary">Tambah Data</a>
                         </div>
                         <div class="card-body">
@@ -18,16 +18,21 @@
                                             <th>No/ID</th>
                                             <th>Nama Petugas</th>
                                             <th>Username</th>
-                                            <th>Tanggal Daftar</th>
-                                            <th>aksi</th>
+                                            <th>Jabatan</th>
+                                            <th>Alamat</th>
+                                            <th>No Telepon</th>
+                                            <th>Tanggal</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($user as $u)
                                         <tr>
                                             <td>{{ $u->id}}</td>
-                                            <td>{{ $u->nama_petugas}}</td>
+                                            <td>{{ $u->nama_user}}</td>
                                             <td>{{ $u->username}}</td>
+                                            <td>{{ $u->Jabatan->nama_jabatan}}</td>
+                                            <td>{{ $u->alamat}}</td>
+                                            <td>{{ $u->no_telepon}}</td>
                                             <td>{{ $u->created_at}}</td>
                                         <td>
                                         <a href="/user/{{$u->id}}/edit" class="btn btn-warning">Edit</a>

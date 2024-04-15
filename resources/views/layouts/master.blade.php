@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="{{asset('assets/plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('assets/plugins/summernote/summernote-bs4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('datatable/dataTables.bootstrap4.min.css')}}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -54,7 +55,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="{{asset('assets/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Marhas Spp</span>
+      <span class="brand-text font-weight-light">BPN Absensi</span>
     </a>
 
     <!-- Sidebar -->
@@ -125,5 +126,10 @@
 <!-- <script src="{{asset('assets/js/demo.js')}}"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('assets/js/pages/dashboard.js')}}"></script>
+<script>
+  $(document).ready( function() {
+    $("#example").DataTable();
+  }); 
+</script>
 </body>
 </html>

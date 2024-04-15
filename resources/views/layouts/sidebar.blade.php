@@ -4,7 +4,7 @@
       <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/dashboard" class="nav-link">
           <i class="nav-icon fas fa-home"></i>
           <p>
             Dashboard
@@ -21,27 +21,27 @@
         </a>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="/pembayaran" class="nav-link">
+            <a href="/rekap" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
-              <p>Kelola Data Pembayaran</p>
+              <p>Kelola Data Rekapan</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/siswa" class="nav-link">
+            <a href="/karyawan" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
-              <p>Kelola Data Siswa</p>
+              <p>Kelola Data Karyawan</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/spp" class="nav-link">
+            <a href="/absensi" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
-              <p>Kelola Data Spp</p>
+              <p>Kelola Data Absensi</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/kelas" class="nav-link">
+            <a href="/jabatan" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
-              <p>Kelola Data Kelas</p>
+              <p>Kelola Data Jabatan</p>
             </a>
           </li>
           <li class="nav-item">
@@ -62,13 +62,13 @@
         </a>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/login" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
-              <p>Profil</p>
+              <p>Login</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/logout" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
               <p>Logout</p>
             </a>

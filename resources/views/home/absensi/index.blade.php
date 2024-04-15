@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','kelola data siswa')
+@section('title','kelola data absensi')
 @section('content')
 <div class="content-wrapper">
     <section class="content">
@@ -8,32 +8,27 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                    <h1>Halaman Kelola Data siswa</h1>
-                    <a href="/siswa/tambah" class="btn btn-primary">Tambah Data Siswa</a>
+                    <h1>Halaman Kelola Data absensi</h1>
+                    <a href="/absensi/tambah" class="btn btn-primary">Tambah Data</a>
                         </div>
                         <div class="card-body">
                             <table id="example" class="table table-striped table-hover table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>nis</th>
-                                            <th>nama</th>
-                                            <th>id kelas</th>
-                                            <th>alamat</th>
-                                            <th>no telp</th>
+                                            <th>No/ID</th>
+                                            <th>Jenis Absen</th>
+                                            <th>Waktu Absen</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($siswa as $g)
+                                        @foreach ($absensi as $s)
                                         <tr>
-                                            <td>{{ $g->nis}}</td>
-                                            <td>{{ $g->nama}}</td>
-                                            <td>{{ $g->Kelas->nama_kelas}}</td>
-                                            <td>{{ $g->alamat}}</td>
-                                            <td>{{ $g->no_telp}}</td>
-                                            <td>{{ $g->created_at}}</td>
+                                            <td>{{ $s->id_absensi}}</td>
+                                            <td>{{ $s->tanggal_absen}}</td>
+                                            <td>{{ $s->jenis_absen}}</td>
                                         <td>
-                                        <a href="/siswa/{{$g->nis}}/edit" class="btn btn-warning">Edit</a>
-                                        <a href="/siswa/{{$g->nis}}/hapus" class="btn btn-danger" onClick="return confirm('ril kh?')">hapus</a>
+                                        <a href="/absensi/{{$s->id_absensi}}/edit" class="btn btn-warning">Edit</a>
+                                        <a href="/absensi/{{$s->id_absensi}}/hapus" class="btn btn-danger" onClick="return confirm('ril kh?')">hapus</a>
                                         </td>
                                         </tr>  
                                         @endforeach

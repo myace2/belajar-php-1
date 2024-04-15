@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SMKN 3 DEPOK</title>
+    <title>Absensi BPN</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -46,8 +46,10 @@
 
                 </center>
 
-                <p class="login-box-msg">Aplikasi Pembayaran SPP</p>
-
+                <p class="login-box-msg">Login</p>
+                <center>
+                <img src="{{asset('assets/img/bpn.jpg')}}" height="190" width="250" class="brand-image img-circle elevation-3" style="opacity: .8">
+                </center>
                 <form action="/PostLogin" method="post">
 
                     {{ csrf_field() }}

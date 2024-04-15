@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','kelola data siswa')
+@section('title','kelola data karyawan')
 @section('content')
 <div class="content-wrapper">
     <br>
@@ -9,46 +9,48 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                    <h4>Form Edit Data siswa</h4>
+                    <h4>Form Edit Data karyawan</h4>
                         </div>
                         <div class="card-body">
-                            <form action="/siswa/{{$siswa->nis}}/update" method="POST">
+                            <form action="/karyawan/{{$karyawan->id_karyawan}}/update" method="POST">
                                 @csrf
 
 
                                 <div class="form-group">
-                                    <label for="">Nis</label>
+                                    <label for="">id_karyawan</label>
                                     <input type="text" class="form-control"
-                                      name="nis" value="{{$siswa->nis}}"
-                                       placeholder="Masukan Nis" required>
+                                      name="id_karyawan" value="{{$karyawan->id_karyawan}}"
+                                       placeholder="Masukan id_karyawan" required>
                                   </div>
 
 
                                 <div class="form-group">
                                   <label for="">Nama</label>
                                   <input type="text" class="form-control"
-                                    name="nama" value="{{$siswa->nama}}"
+                                    name="nama" value="{{$karyawan->nama}}"
                                      placeholder="Masukan Nama" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="">id Kelas</label>
-                                    <input type="text" class="form-control"
-                                      name="id_kelas" value="{{$siswa->id_kelas}}" 
-                                      placeholder="masukkan id Kelas" required>
+                                    <label for="">Jabatan</label>
+                                    <select name="id_jabatan" class="form-control" value="{{$karyawan->nama_jabatan}}">
+                                        @foreach ($jabatan as $jabatan)
+                                            <option value="{{ $jabatan->id }}">{{ $jabatan->nama_jabatan }}</option>
+                                        @endforeach
+                                    </select> required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">alamat</label>
                                     <input type="text" class="form-control"
-                                      name="alamat" value="{{$siswa->alamat}}" 
+                                      name="alamat" value="{{$karyawan->alamat}}" 
                                       placeholder="masukkan alamat" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">no Telp</label>
                                     <input type="number" class="form-control"
-                                      name="no_telp" value="{{$siswa->no_telp}}" 
+                                      name="no_telp" value="{{$karyawan->no_telp}}" 
                                       placeholder="masukkan no telp" required>
                                 </div>
 
