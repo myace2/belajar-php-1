@@ -21,6 +21,6 @@ class DashboardController extends Controller
         $today = Carbon::today();
         $endDate = Carbon::today()->addDays(7);
         
-        return view('home.dashboard', compact('rekaps'));
+        return view('home.dashboard', compact('rekaps', 'jumlah_karyawan', 'jumlah_jabatan'));
 }
 }
