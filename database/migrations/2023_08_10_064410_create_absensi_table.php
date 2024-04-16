@@ -14,12 +14,9 @@ class CreateAbsensiTable extends Migration
     public function up()
     {
         Schema::create('absensis', function (Blueprint $table) {
-            $table->integer('absensi')->primary();
+            $table->integer('id_absensi')->primary();
             $table->date('tanggal_absen');
-            $table->date('bulan_absen');
-            $table->date('tahun_absen');
             $table->string('jenis_absen');
-            $table->integer('waktu_absen');
             $table->timestamps();
         });
     }

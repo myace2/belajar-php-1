@@ -15,6 +15,7 @@ return new class extends Migration
             $table->integer('id')->primary();
             $table->string('nama_user', 33);
             $table->string('jabatan', 20);
+            $table->string('username');
             $table->text('alamat');
             $table->string('no_telepon', 15);
             $table->string('email')->unique();
